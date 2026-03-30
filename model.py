@@ -6,6 +6,7 @@ from preprocess import clean_text
 
 # Load dataset
 df = pd.read_csv("dataset.csv")
+df = df.rename(columns={"review": "text", "sentiment": "label"})
 
 # Clean text
 df['text'] = df['text'].apply(clean_text)
@@ -15,7 +16,7 @@ X = df['text']
 y = df['label']
 
 # Convert text to numbers
-vectorizer = TfidfVectorizer()
+vectorizer = TfidfVectorizer(ngram_range=(1,2), max_features=5000)
 X = vectorizer.fit_transform(X)
 
 # Train Test Split
