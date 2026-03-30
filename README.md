@@ -32,3 +32,10 @@ Built using Python, NLP techniques, and Machine Learning.
 1. Clone the repository:
 ```bash
 git clone https://github.com/SaurabhTripathi001/sentiment-analysis-project.git
+
+## 📥 Dataset
+
+Due to large file size, dataset is not included in the repository.
+
+You can download it from:
+https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
